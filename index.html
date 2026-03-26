@@ -1,0 +1,694 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Adam Schlosser — Infrastructure & Cloud Engineer</title>
+<meta name="description" content="Adam Schlosser is an infrastructure and cloud engineer with 15+ years in Azure, Microsoft 365, identity and zero trust architecture. Founder of Turn 5 Technologies LLC. Based in Port Washington, WI.">
+<meta name="author" content="Adam Schlosser">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://resume.schlossers.io">
+<meta property="og:type" content="profile">
+<meta property="og:title" content="Adam Schlosser — Infrastructure & Cloud Engineer">
+<meta property="og:description" content="Azure & Microsoft 365 specialist focused on identity, zero trust, and cloud infrastructure. 15+ years of experience. Founder of Turn 5 Technologies LLC.">
+<meta property="og:url" content="https://resume.schlossers.io">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Adam Schlosser — Infrastructure & Cloud Engineer">
+<meta name="twitter:description" content="Azure & Microsoft 365 specialist focused on identity, zero trust, and cloud infrastructure.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --white:   #FFFFFF;
+  --paper:   #F7F9FC;
+  --border:  #DDE6EF;
+  --mist:    #EEF3F8;
+  --ink:     #0D1B2A;
+  --navy:    #1B3A6B;
+  --steel:   #2A6FAC;
+  --sky:     #4A9FD4;
+  --silver:  #7A90A8;
+  --warm:    #F4F1EC;
+  --serif:   'Outfit', sans-serif;
+  --sans:    'DM Sans', system-ui, sans-serif;
+  --mono:    'DM Mono', monospace;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--paper);
+  font-family: var(--sans);
+  color: var(--ink);
+  line-height: 1.6;
+}
+
+/* ── TOP NAV BAR ── */
+.topbar {
+  background: var(--white);
+  border-bottom: 1px solid var(--border);
+  padding: 14px 48px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 1px 8px rgba(13,27,42,0.06);
+}
+
+.topbar-name {
+  font-family: 'Outfit', sans-serif;
+  font-size: 17px;
+  font-weight: 600;
+  color: var(--navy);
+  letter-spacing: -0.01em;
+}
+
+.topbar-links {
+  display: flex;
+  gap: 28px;
+}
+
+.topbar-links a {
+  font-family: var(--mono);
+  font-size: 11px;
+  color: var(--silver);
+  text-decoration: none;
+  letter-spacing: 0.05em;
+  transition: color 0.2s;
+}
+
+.topbar-links a:hover { color: var(--steel); }
+
+/* ── HERO ── */
+.hero {
+  background: var(--white);
+  border-bottom: 1px solid var(--border);
+  padding: 72px 48px 64px;
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+.hero-inner {
+  display: grid;
+  grid-template-columns: 1fr 420px;
+  gap: 80px;
+  align-items: start;
+}
+
+.hero-eyebrow {
+  font-family: var(--mono);
+  font-size: 11px;
+  color: var(--steel);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.hero-eyebrow::before {
+  content: '';
+  display: block;
+  width: 28px;
+  height: 2px;
+  background: var(--steel);
+}
+
+h1 {
+  font-family: 'Outfit', sans-serif;
+  font-size: clamp(40px, 5vw, 60px);
+  font-weight: 600;
+  color: var(--navy);
+  line-height: 1.0;
+  letter-spacing: -0.02em;
+  margin-bottom: 6px;
+}
+
+h1 em {
+  font-style: normal;
+  font-weight: 300;
+  color: var(--steel);
+}
+
+.hero-title {
+  font-family: var(--mono);
+  font-size: 11px;
+  color: var(--silver);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-top: 20px;
+  margin-bottom: 28px;
+  padding-top: 20px;
+  border-top: 1px solid var(--border);
+}
+
+.hero-contact {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.hero-contact a {
+  font-size: 13px;
+  color: var(--silver);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: color 0.2s;
+}
+
+.hero-contact a:hover { color: var(--steel); }
+
+.hero-contact a span {
+  font-family: var(--mono);
+  font-size: 10px;
+  color: var(--steel);
+  width: 16px;
+}
+
+.hero-right {}
+
+.profile-card {
+  background: var(--mist);
+  border: 1px solid var(--border);
+  border-top: 3px solid var(--steel);
+  border-radius: 6px;
+  padding: 28px;
+}
+
+.profile-label {
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--steel);
+  margin-bottom: 14px;
+}
+
+.profile-text {
+  font-size: 14px;
+  line-height: 1.75;
+  color: #3A4A5C;
+  font-weight: 300;
+}
+
+.chips {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.chip {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 100px;
+  padding: 5px 12px;
+  font-family: var(--mono);
+  font-size: 10px;
+  color: var(--navy);
+  letter-spacing: 0.04em;
+}
+
+/* ── LAYOUT ── */
+.page-body {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 48px 80px;
+  display: grid;
+  grid-template-columns: 1fr 280px;
+  gap: 0 60px;
+  align-items: start;
+}
+
+/* ── SECTION ── */
+.section {
+  padding: 52px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.section:last-child { border-bottom: none; }
+
+.section-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 36px;
+}
+
+.section-label {
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--steel);
+  white-space: nowrap;
+}
+
+.section-rule {
+  flex: 1;
+  height: 1px;
+  background: var(--border);
+}
+
+/* ── JOBS ── */
+.job {
+  margin-bottom: 40px;
+  padding-bottom: 40px;
+  border-bottom: 1px solid var(--mist);
+  opacity: 0;
+  transform: translateY(12px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.job.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.job:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+
+.job-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 4px;
+}
+
+.job-company {
+  font-family: 'Outfit', sans-serif;
+  font-size: 17px;
+  font-weight: 600;
+  color: var(--navy);
+}
+
+.job-dates {
+  font-family: var(--mono);
+  font-size: 10px;
+  color: var(--silver);
+  letter-spacing: 0.06em;
+}
+
+.job-title {
+  font-size: 13px;
+  color: var(--steel);
+  font-style: italic;
+  margin-bottom: 14px;
+}
+
+.job-bullets {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.job-bullets li {
+  font-size: 14px;
+  line-height: 1.65;
+  color: #3A4A5C;
+  padding-left: 20px;
+  position: relative;
+  font-weight: 300;
+}
+
+.job-bullets li::before {
+  content: '▸';
+  position: absolute;
+  left: 0;
+  color: var(--sky);
+  font-size: 9px;
+  top: 5px;
+}
+
+/* ── SIDEBAR ── */
+.sidebar {
+  padding-top: 52px;
+}
+
+.sidebar-section {
+  margin-bottom: 36px;
+}
+
+.sidebar-label {
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--steel);
+  margin-bottom: 14px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--border);
+}
+
+.sidebar-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.sidebar-list li {
+  font-size: 13px;
+  color: #3A4A5C;
+  padding-left: 14px;
+  position: relative;
+  font-weight: 300;
+}
+
+.sidebar-list li::before {
+  content: '·';
+  position: absolute;
+  left: 0;
+  color: var(--steel);
+  font-weight: 600;
+}
+
+.cert-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.cert-item {
+  padding: 10px 14px;
+  background: var(--mist);
+  border-left: 2px solid var(--steel);
+  border-radius: 0 4px 4px 0;
+}
+
+.cert-name {
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--navy);
+  line-height: 1.3;
+}
+
+.cert-meta {
+  font-family: var(--mono);
+  font-size: 10px;
+  color: var(--silver);
+  margin-top: 3px;
+}
+
+.edu-item {
+  margin-bottom: 16px;
+}
+
+.edu-degree {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--navy);
+}
+
+.edu-school {
+  font-size: 12px;
+  color: var(--silver);
+  font-style: italic;
+}
+
+/* ── FOOTER ── */
+footer {
+  background: var(--white);
+  border-top: 1px solid var(--border);
+  padding: 28px 48px;
+  text-align: center;
+}
+
+footer p {
+  font-family: var(--mono);
+  font-size: 10px;
+  color: var(--silver);
+  letter-spacing: 0.08em;
+}
+
+footer a {
+  color: var(--silver);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+footer a:hover { color: var(--steel); }
+
+/* ── ANIMATIONS ── */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(16px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.hero-inner > * {
+  animation: fadeUp 0.6s ease both;
+}
+.hero-inner > *:nth-child(1) { animation-delay: 0.05s; }
+.hero-inner > *:nth-child(2) { animation-delay: 0.15s; }
+
+@media (max-width: 960px) {
+  .hero-inner, .page-body { grid-template-columns: 1fr; }
+  .hero, .page-body { padding-left: 28px; padding-right: 28px; }
+  .topbar { padding: 14px 28px; }
+  .topbar-links { display: none; }
+  .sidebar { padding-top: 0; }
+}
+</style>
+</head>
+<body>
+
+<nav class="topbar">
+  <div class="topbar-name">Adam Schlosser</div>
+  <div class="topbar-links">
+    <a href="#experience">Experience</a>
+    <a href="#certifications">Certifications</a>
+    <a href="#education">Education</a>
+    <a href="mailto:adam@schlossers.io">Contact</a>
+  </div>
+</nav>
+
+<div style="background: var(--white); border-bottom: 1px solid var(--border);">
+<div class="hero">
+  <div class="hero-inner">
+    <div class="hero-left">
+      <div class="hero-eyebrow">Infrastructure Engineer</div>
+      <h1>Adam <em>Schlosser</em></h1>
+      <div class="hero-title">Azure · Microsoft 365 · Identity &amp; Zero Trust</div>
+      <div class="hero-contact">
+        <a href="tel:2624165680"><span>✆</span>(262) 416-5680</a>
+        <a href="mailto:adam@schlossers.io"><span>@</span>adam@schlossers.io</a>
+        <a href="https://linkedin.com/in/adamschlosser" target="_blank"><span>in</span>linkedin.com/in/adamschlosser</a>
+        <a href="#"><span>⌖</span>Port Washington, WI</a>
+      </div>
+    </div>
+    <div class="hero-right">
+      <div class="profile-card">
+        <div class="profile-label">Profile</div>
+        <p class="profile-text">
+          Infrastructure and cloud engineer with 15+ years designing, automating, and securing enterprise IT environments. Focus on identity and access management and zero trust — and finding real ways to work AI and automation into the day-to-day, not just as a buzzword but as actual tooling. FT at Corvias, side practice via Turn 5 Technologies LLC.
+        </p>
+        <div class="chips">
+          <div class="chip">Entra ID</div>
+          <div class="chip">Zero Trust</div>
+          <div class="chip">Bicep IaC</div>
+          <div class="chip">GitHub Actions</div>
+          <div class="chip">PowerShell</div>
+          <div class="chip">Claude Code</div>
+          <div class="chip">Azure</div>
+          <div class="chip">M365</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+<div class="page-body">
+  <main>
+
+    <section class="section" id="experience">
+      <div class="section-header">
+        <span class="section-label">Experience</span>
+        <div class="section-rule"></div>
+      </div>
+
+      <div class="job">
+        <div class="job-top">
+          <div class="job-company">Corvias</div>
+          <div class="job-dates">Apr. 2022 – Present</div>
+        </div>
+        <div class="job-title">Infrastructure Administrator · East Greenwich, RI (Remote)</div>
+        <ul class="job-bullets">
+          <li>Driving Azure and Microsoft 365 adoption including identity modernization and cloud infrastructure buildout.</li>
+          <li>Administering enterprise backup environment; migrated file-based to VM-based (Nutanix) backups — improving reliability and recovery time.</li>
+          <li>Led data center migration to co-location facility — coordinating workload sequencing, cutover planning, and validation.</li>
+          <li>Established monthly patch cadence across all production Windows servers with coordinated maintenance windows.</li>
+        </ul>
+      </div>
+
+      <div class="job">
+        <div class="job-top">
+          <div class="job-company">Turn 5 Technologies LLC</div>
+          <div class="job-dates">Feb. 2025 – Present</div>
+        </div>
+        <div class="job-title">Founder & Principal Consultant · Azure & M365 (Side Practice)</div>
+        <ul class="job-bullets">
+          <li>Architect and implement zero-trust identity frameworks — Entra ID, Conditional Access, PIM, MFA — across hybrid client environments.</li>
+          <li>Lead Entra ID modernization: Hybrid Join strategy, AD decommission planning, Intune co-management adoption.</li>
+          <li>Deploy IaC pipelines with Bicep and GitHub Actions using OIDC Workload Identity Federation — no stored secrets.</li>
+          <li>Build M365 provisioning apps with Entra ID auth, RBAC, audit logging, and Key Vault integration.</li>
+          <li>Automate ops with PowerShell and Claude Code agents: inventory, reboot sequencing, compliance reporting.</li>
+        </ul>
+      </div>
+
+      <div class="job">
+        <div class="job-top">
+          <div class="job-company">Kapco Inc.</div>
+          <div class="job-dates">Sept. 2021 – Apr. 2022</div>
+        </div>
+        <div class="job-title">Infrastructure Engineer · Grafton, WI</div>
+        <ul class="job-bullets">
+          <li>Managed IT infrastructure across 10 locations: Meraki SD-WAN, ExtremeNetworks, Ruckus, Citrix, MobileIron MDM.</li>
+          <li>Cut onboarding/offboarding from multiple days to one by eliminating process bottlenecks.</li>
+          <li>Primary L2/L3 escalation; maintained DR/BCP runbooks for 300+ user organization.</li>
+        </ul>
+      </div>
+
+      <div class="job">
+        <div class="job-top">
+          <div class="job-company">River Run Computers</div>
+          <div class="job-dates">May – Sept. 2021</div>
+        </div>
+        <div class="job-title">Systems Engineer · Glendale, WI (MSP)</div>
+        <ul class="job-bullets">
+          <li>SME for backup, DR, and business continuity across an SMB client portfolio.</li>
+          <li>Led new client onboarding: discovery, vulnerability assessments, roadmaps, and budgetary SOWs.</li>
+        </ul>
+      </div>
+
+      <div class="job">
+        <div class="job-top">
+          <div class="job-company">Integrated Systems Corporation</div>
+          <div class="job-dates">Jul. 2011 – May 2021</div>
+        </div>
+        <div class="job-title">Sysadmin → Architect → Senior Infrastructure Architect · Mequon, WI</div>
+        <ul class="job-bullets">
+          <li>Decade-long progression from sysadmin to Senior Infrastructure Architect at a private cloud MSP — protecting 400+ clients, 600+ VMs, and ~150TB of daily backup data.</li>
+          <li>Architected client AD/GPO environments for on-prem and private cloud — foundational identity work that shaped the current zero-trust focus.</li>
+          <li>Led VMware architecture across multiple data centers; spearheaded Dallas expansion (2013) and second Mequon site (2016).</li>
+          <li>Managed two direct reports; maintained client relationships across multiple industry verticals.</li>
+        </ul>
+      </div>
+
+    </section>
+
+  </main>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-section">
+      <div class="sidebar-label">Identity & Zero Trust</div>
+      <ul class="sidebar-list">
+        <li>Entra ID (Azure AD)</li>
+        <li>Conditional Access</li>
+        <li>Privileged Identity Mgmt</li>
+        <li>Hybrid Join / Migration</li>
+        <li>OIDC · SAML · OAuth</li>
+        <li>MFA Architecture</li>
+        <li>Zero Trust Design</li>
+      </ul>
+    </div>
+
+    <div class="sidebar-section">
+      <div class="sidebar-label">Cloud & Automation</div>
+      <ul class="sidebar-list">
+        <li>Microsoft Azure</li>
+        <li>Bicep IaC</li>
+        <li>GitHub Actions CI/CD</li>
+        <li>PowerShell (Advanced)</li>
+        <li>Claude Code Agents</li>
+        <li>Azure Virtual Desktop</li>
+        <li>Azure SQL · APIM</li>
+      </ul>
+    </div>
+
+    <div class="sidebar-section">
+      <div class="sidebar-label">Microsoft 365</div>
+      <ul class="sidebar-list">
+        <li>Exchange · SharePoint</li>
+        <li>Microsoft Purview</li>
+        <li>Copilot Governance</li>
+        <li>DLP · Sensitivity Labels</li>
+      </ul>
+    </div>
+
+    <div class="sidebar-section">
+      <div class="sidebar-label">Infrastructure</div>
+      <ul class="sidebar-list">
+        <li>Active Directory / GPO</li>
+        <li>VMware · Citrix · AVD</li>
+        <li>Networking L2/L3</li>
+        <li>Meraki SD-WAN</li>
+        <li>Backup & DR</li>
+      </ul>
+    </div>
+
+    <div class="sidebar-section" id="certifications">
+      <div class="sidebar-label">Certifications</div>
+      <ul class="cert-list">
+        <li class="cert-item">
+          <div class="cert-name">Azure Fundamentals</div>
+          <div class="cert-meta">Microsoft · AZ-900 · Nov. 2025</div>
+        </li>
+        <li class="cert-item">
+          <div class="cert-name">Datto DCDS</div>
+          <div class="cert-meta">Datto / Kaseya</div>
+        </li>
+        <li class="cert-item">
+          <div class="cert-name">Commvault Master v11</div>
+          <div class="cert-meta">Commvault · May 2018</div>
+        </li>
+        <li class="cert-item">
+          <div class="cert-name">Commvault Engineer v11</div>
+          <div class="cert-meta">Commvault · Mar. 2018</div>
+        </li>
+        <li class="cert-item">
+          <div class="cert-name">Commvault Prof. v11</div>
+          <div class="cert-meta">Commvault · Jan. 2018</div>
+        </li>
+      </ul>
+    </div>
+
+    <div class="sidebar-section" id="education">
+      <div class="sidebar-label">Education</div>
+      <div class="edu-item">
+        <div class="edu-degree">B.S. Information Studies</div>
+        <div class="edu-school">Univ. of Wisconsin-Milwaukee</div>
+      </div>
+      <div class="edu-item">
+        <div class="edu-degree">A.S. Network Specialist</div>
+        <div class="edu-school">Milwaukee Area Technical College</div>
+      </div>
+    </div>
+
+  </aside>
+</div>
+
+<footer>
+  <p>Adam John Schlosser · Port Washington, WI · <a href="mailto:adam@schlossers.io">adam@schlossers.io</a> · (262) 416-5680</p>
+</footer>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+  }, { threshold: 0.15 });
+  document.querySelectorAll('.job').forEach(job => observer.observe(job));
+});
+</script>
+</body>
+</html>
